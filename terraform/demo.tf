@@ -1,5 +1,4 @@
 provider "oci" {
-  version          = ">= 3.0.0"
   tenancy_ocid     = var.tenancy_ocid
   user_ocid        = var.user_ocid
   fingerprint      = var.fingerprint
@@ -15,8 +14,8 @@ resource "oci_core_instance" "instance" {
   shape               = "VM.Standard2.1"
   create_vnic_details {
     assign_public_ip = false
-    display_name     = format("instance-%s", count.index + 1)
-    subnet_id        = oci_core_subnet.priv.id
+    display_name     = format("demo-%s", count.index + 1)
+    subnet_id        = var.subnet_id
   }
   metadata = {
     ssh_authorized_keys = chomp(file("/home/demo/.ssh/id_rsa.pub"))
