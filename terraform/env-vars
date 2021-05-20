@@ -2,8 +2,8 @@
 ### Common variables
 ############################
 export TF_VAR_tenancy_ocid="ocid1.tenancy.oc1..aaaaaaaasyc4pviq2l4mjafhhk2hejvsprv52jblh53jtujqoxi4knifzgya"
-export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaakgrei5g3ai2co4u3jc6vd3vonljh6fsxxr6o3tlxwzpfbapiqanq"
-export TF_VAR_fingerprint="13:98:62:8e:f5:18:0c:88:29:8d:99:45:07:e2:61:bc"
+export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaavzdso27wxcvnny2djwxkzwpsit47qend2ffrlsknvcoicyohn7va"
+export TF_VAR_fingerprint="74:24:2b:66:c4:91:66:01:04:c1:6e:4b:8d:64:ba:a7"
 export TF_VAR_private_key_path=~/keys/demo_api_key.pem
 export TF_VAR_region="us-ashburn-1"
 export TF_VAR_ssh_public_key_path="~/keys/oci/oalapp.pub"
