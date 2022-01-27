@@ -9,7 +9,7 @@ provider "oci" {
 resource "oci_core_instance" "instance" {
   count               = 1
   availability_domain = lookup(data.oci_identity_availability_domains.AD.availability_domains["0"], "name")
-  compartment_id      = var.my_compoartment_id
+  compartment_id      = var.tenancy_ocid
   display_name        = format("demo-%s", count.index + 1)
   shape               = "VM.Standard2.1"
   create_vnic_details {
