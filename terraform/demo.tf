@@ -15,8 +15,8 @@ resource "oci_core_instance" "instance" {
   create_vnic_details {
     assign_public_ip = false
     display_name     = format("demo-%s", count.index + 1)
-    subnet_id        = var.subnet_id
-    private_ip       = format("10.0.2.%s", count.index + 100)
+    subnet_id        = data.oci_core_subnets.private.subnets[0].id
+    private_ip       = format("10.0.3.%s", count.index + 100)
   }
   metadata = {
     ssh_authorized_keys = chomp(file("/home/demo/.ssh/id_rsa.pub"))
