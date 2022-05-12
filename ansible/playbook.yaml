@@ -1,6 +1,6 @@
 - name: Update web servers
   hosts: all
-  remote_user: opc
+  remote_user: demo
   tasks:
   - name: run shell
     shell: "cat /etc/hosts" 
