@@ -1,0 +1,34 @@
+kind: StatefulSet
+apiVersion: apps/v1
+metadata:
+  name: demo-sts
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        volumeMounts:
+        - name: additional-block-volume
+          mountPath: /u01
+        ports:
+          - containerPort: 80
+  volumeClaimTemplates:
+  - metadata:
+      name: additional-block-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "openebs-lvmpv"
+      resources:
+        requests:
+          storage: 1Mi

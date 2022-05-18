@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: csi-lvmpv
+  labels:
+    app: volum-test
+spec:
+  storageClassName: openebs-lvmpv
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Mi
