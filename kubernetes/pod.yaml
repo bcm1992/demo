@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: openebs-test
-  label:
+  labels:
     apps: openebs-test
 spec:
   restartPolicy: Never
