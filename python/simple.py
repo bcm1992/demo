@@ -1,9 +1,9 @@
 server_list = [ 
-    {"server_name":"alpha-01", "sever_type":"Linux", "version":"7.1", "uptime": 3823},
-    {"server_name":"alpha-02", "sever_type":"Linux", "version":"7.1", "uptime": 76822},
-    {"server_name":"Win-01", "sever_type":"Windows", "version":"2022", "uptime": 2881},
-    {"server_name":"Win-02", "sever_type":"Windows", "version":"2022", "uptime": 123},
-    {"server_name":"beta-01", "sever_type":"Linux", "version":"6.9", "uptime": 21833}
+    {"server_name":"alpha-01", "server_type":"Linux", "version":"7.1", "uptime": 3823},
+    {"server_name":"alpha-02", "server_type":"Linux", "version":"7.1", "uptime": 76822},
+    {"server_name":"Win-01", "server_type":"Windows", "version":"2022", "uptime": 2881},
+    {"server_name":"Win-02", "server_type":"Windows", "version":"2022", "uptime": 123},
+    {"server_name":"beta-01", "server_type":"Linux", "version":"6.9", "uptime": 21833}
   ]
 
 #1 create a list `linux_server` including Linux servers only
