@@ -4,6 +4,10 @@ data "oci_identity_availability_domains" "AD" {
 
 data "oci_core_vcns" "vcns" {
   compartment_id = var.tenancy_ocid
+  filter {
+    name   = "display_name"
+    values = ["bcm1992"]
+  }
 }
 
 data "oci_core_subnets" "private" {
